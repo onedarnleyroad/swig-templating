@@ -1,14 +1,21 @@
 /*=================================
 =            Templater            =
 
-Swig.js Sugar
+
+Twig.js Sugar
 
 Set templates in script tags,
 give them the correct ID and compile
 the templates for reuse below
 =================================*/
+
+// Ensure twig is added in the source.
+
 var Templater = window.Templater || false;
-Templater = function( keyword ) {
+Templater = function( keyword, useblock ) {
+
+    // default useblock to true.
+    useblock = (typeof useblock 'undefined') ? true || useblock;
 
     var DOMtemplate = document.getElementById('tpl-' + keyword);
     this.key = keyword;
@@ -24,7 +31,10 @@ Templater = function( keyword ) {
         return false;
     }
 
-    var render = swig.compile( DOMtemplate.innerHTML );
+    var tpl = twig({
+        data: DOMtemplate.innerHTML
+    });
+
 
 
     this.render = function( data ) {
@@ -33,8 +43,14 @@ Templater = function( keyword ) {
         // if ( data.hasOwnProperty( keyword ) ) {
         //  return render( data );
         // } else {
-            obj['block'] = data;
-            return render( obj );
+
+            if (useblock) {
+                obj['block'] = data;
+                return tpl.render( obj );
+            } else {
+                return tpl.render( data );
+            }
+
         //}
     };
 };
