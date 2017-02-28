@@ -1,5 +1,5 @@
 {
-  "name": "swig-templating",
+  "name": "twig-templating",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onedarnleyroad/swig-templating.git"
+    "url": "git+https://github.com/onedarnleyroad/twig-templating.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/onedarnleyroad/swig-templating/issues"
+    "url": "https://github.com/onedarnleyroad/twig-templating/issues"
   },
-  "homepage": "https://github.com/onedarnleyroad/swig-templating#readme",
+  "homepage": "https://github.com/onedarnleyroad/twig-templating#readme",
   "dependencies": {
     "twig": "^0.10.3"
   }
