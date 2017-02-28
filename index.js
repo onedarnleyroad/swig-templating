@@ -15,7 +15,7 @@ var Templater = window.Templater || false;
 Templater = function( keyword, useblock ) {
 
     // default useblock to true.
-    useblock = (typeof useblock 'undefined') ? true || useblock;
+    useblock = (typeof useblock === 'undefined') ? true : useblock;
 
     var DOMtemplate = document.getElementById('tpl-' + keyword);
     this.key = keyword;
@@ -31,7 +31,7 @@ Templater = function( keyword, useblock ) {
         return false;
     }
 
-    var tpl = twig({
+    var tpl = Twig.twig({
         data: DOMtemplate.innerHTML
     });
 
