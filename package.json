@@ -1,0 +1,22 @@
+{
+  "name": "swig-templating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onedarnleyroad/swig-templating.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onedarnleyroad/swig-templating/issues"
+  },
+  "homepage": "https://github.com/onedarnleyroad/swig-templating#readme",
+  "dependencies": {
+    "twig": "^0.10.3"
+  }
+}
